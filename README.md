@@ -31,7 +31,7 @@ You only need a modern web browser (Chrome, Firefox, Safari, Edge).
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/StartIt-Maz/EuroWeather.git
+    git clone https://github.com/Maz2580/EuroWeather.git
     ```
     *(Note: Replace with your actual repository URL)*
 
