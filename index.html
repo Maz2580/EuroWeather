@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>EuroWeather | 7-Day European City Forecast</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body>
+    <!-- Animated Background Elements -->
+    <div class="bg-animation">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">✈</span>
+                <div class="logo-text">
+                    <span class="logo-title">EuroWeather</span>
+                    <span class="logo-subtitle">Your European Travel Companion</span>
+                </div>
+            </div>
+            <nav class="nav">
+                <span class="nav-tagline">Plan your perfect trip with accurate 7-day forecasts</span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title">Discover Europe's Weather</h1>
+            <p class="hero-description">
+                Select a destination and explore the 7-day forecast to plan your perfect European adventure.
+            </p>
+        </section>
+
+        <!-- City Selector -->
+        <section class="city-selector">
+            <div class="selector-card">
+                <label for="city-select" class="selector-label">
+                    <span class="label-icon">📍</span>
+                    Choose Your Destination
+                </label>
+                <div class="select-wrapper">
+                    <select id="city-select" class="city-dropdown">
+                        <option value="">— Select a European City —</option>
+                    </select>
+                    <span class="select-arrow">▼</span>
+                </div>
+                <button id="get-forecast" class="forecast-btn">
+                    <span class="btn-text">Get 7-Day Forecast</span>
+                    <span class="btn-icon">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading hidden">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Fetching weather data...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="error-message hidden">
+            <span class="error-icon">⚠️</span>
+            <p class="error-text"></p>
+        </div>
+
+        <!-- Forecast Results -->
+        <section id="forecast-container" class="forecast-container hidden">
+            <div class="forecast-header">
+                <h2 class="forecast-title">
+                    <span id="selected-city-name">City Name</span>
+                    <span id="selected-country" class="country-name"></span>
+                </h2>
+                <p class="forecast-subtitle">7-Day Weather Forecast</p>
+                <div class="temperature-toggle">
+                    <button id="celsius-btn" class="temp-btn active">°C</button>
+                    <button id="fahrenheit-btn" class="temp-btn">°F</button>
+                </div>
+            </div>
+
+            <div id="forecast-grid" class="forecast-grid">
+                <!-- Forecast cards will be dynamically inserted here -->
+            </div>
+
+            <div class="forecast-footer">
+                <p class="data-source">
+                    Data provided by <a href="http://www.7timer.info" target="_blank" rel="noopener">7Timer!</a> Weather
+                    Service
+                </p>
+                <p class="last-updated">
+                    Last updated: <span id="update-time"></span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Travel Tips Section -->
+        <section class="travel-tips">
+            <h3 class="tips-title">✨ Travel Planning Tips</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="tip-icon">🧳</span>
+                    <h4>Pack Smart</h4>
+                    <p>Check the forecast before packing to ensure you have appropriate clothing for your trip.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-icon">📅</span>
+                    <h4>Plan Activities</h4>
+                    <p>Schedule outdoor activities on clear days and save museums for rainy weather.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-icon">🌡️</span>
+                    <h4>Temperature Range</h4>
+                    <p>Note the daily highs and lows to dress in comfortable layers.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright">© 2024 EuroWeather Travel Services</p>
+            <p class="footer-links">
+                <a href="#" class="footer-link">About</a>
+                <span class="divider">|</span>
+                <a href="#" class="footer-link">Privacy</a>
+                <span class="divider">|</span>
+                <a href="#" class="footer-link">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
